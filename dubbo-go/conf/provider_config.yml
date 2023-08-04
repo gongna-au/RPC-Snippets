@@ -1,0 +1,13 @@
+dubbo:
+  registries:
+    "hangzhouzk":
+      protocol: "zookeeper"
+      timeout: "3s"
+      address: "127.0.0.1:2181"
+  provider:
+    services:
+      "UserProvider":
+        path: "common.UserProvider"
+        registry: "hangzhouzk"
+        protocol: "dubbo"
+        interface: "common.UserProvider"
